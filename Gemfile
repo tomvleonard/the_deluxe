@@ -32,6 +32,7 @@ gem 'will_paginate', '~> 3.2.1'
 gem 'haml', '~> 5.1.2'
 gem 'simple_form', '~> 5.0.1'
 gem 'jquery-rails', '~> 4.3.5'
+gem 'devise'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
