@@ -32,13 +32,14 @@ gem 'will_paginate', '~> 3.2.1'
 gem 'haml', '~> 5.1.2'
 gem 'simple_form', '~> 5.0.1'
 gem 'jquery-rails', '~> 4.3.5'
-gem 'devise'
+gem 'bootstrap', '~> 5.0.1'
+gem 'devise', '~> 4.7.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'rspec-rails'
-  gem 'factory_bot_rails'
+  gem 'rspec-rails', '~> 5.0.1'
+  gem 'factory_bot_rails', '~> 6.2.0'
 end
 
 group :development do
