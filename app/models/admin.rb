@@ -6,7 +6,7 @@ class Admin < ApplicationRecord
     :rememberable,
     :validatable
 
-  [ :username, :password ].each do |attr|
+  [ :email, :password ].each do |attr|
     validates attr, presence: true
   end
 end

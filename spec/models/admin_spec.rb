@@ -7,12 +7,13 @@ RSpec.describe Admin, type: :model do
     end
 
     it 'is valid when all attributes are present' do
+      debugger
       expect(@admin.valid?).to eq true
     end
 
-    context 'given that the username attribute is missing' do
+    context 'given that the email attribute is missing' do
       before do
-        @admin.username = nil
+        @admin.email = nil
       end
 
       it 'is invalid' do
@@ -22,7 +23,7 @@ RSpec.describe Admin, type: :model do
       it 'has expected error message' do
         expected = [ "can't be blank" ]
         @admin.valid?
-        expect(@admin.errors[:username].to_a).to eq expected
+        expect(@admin.errors[:email].to_a).to eq expected
       end
     end
 
