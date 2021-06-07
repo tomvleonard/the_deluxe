@@ -7,10 +7,10 @@ RSpec.describe Admin, type: :model do
     end
 
     it 'is valid when all attributes are present' do
-      debugger
       expect(@admin.valid?).to eq true
     end
 
+    # devise adds validation for email but we're testing it anyway for clarity
     context 'given that the email attribute is missing' do
       before do
         @admin.email = nil
@@ -27,6 +27,7 @@ RSpec.describe Admin, type: :model do
       end
     end
 
+    # devise adds validation for password but we're testing it anyway for clarity
     context 'given that the password attribute is missing' do
       before do
         @admin.password = nil

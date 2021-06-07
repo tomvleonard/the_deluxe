@@ -5,8 +5,4 @@ class Admin < ApplicationRecord
     :recoverable,
     :rememberable,
     :validatable
-
-  [ :email, :password ].each do |attr|
-    validates attr, presence: true
-  end
 end
