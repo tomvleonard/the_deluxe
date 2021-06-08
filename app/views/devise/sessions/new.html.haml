@@ -1,0 +1,9 @@
+%fieldset
+  %legend Sign In
+  = simple_form_for resource, as: resource_name, url: admin_session_path do |f|
+    %ul
+      %li= f.input :email, label: 'Email', required: true, autofocus: true, input_html: { class: 'form-control' }
+      %li= f.input :password, label: 'Password', required: true, input_html: { class: 'form-control' }
+      - if devise_mapping.rememberable?
+        %li= f.input :remember_me, as: :boolean
+    .form-actions= f.submit 'Submit', class: 'btn btn-primary'
